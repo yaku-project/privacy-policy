@@ -1,41 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-active-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Yaku (訳)</title>
-  <meta name="description" content="Privacy Policy for Yaku (Yet Another Kokugo Utility) - Offline-first Android Japanese-English & Kokugo dictionary with zero telemetry.">
-  <meta name="theme-color" content="#1F4788">
+  <meta name="description" content="Privacy Policy for Yaku (Yet Another Kokugo Utility) - Offline Japanese dictionary for Android with zero telemetry.">
+  <meta name="theme-color" content="#1E3A8A">
   <style>
     :root {
-      --primary: #1F4788;
-      --primary-hover: #163668;
-      --primary-soft: #EBF2FA;
-      --text-main: #0F172A;
-      --text-muted: #475569;
-      --bg-page: #F8FAFC;
-      --bg-card: #FFFFFF;
-      --border: #E2E8F0;
-      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --badge-bg: #E8F0FE;
-      --badge-text: #193C78;
-      --badge-border: #C6DAFC;
+      --bg-page: #FAF9F5;
+      --bg-paper: #FFFFFF;
+      --text-ink: #1F2328;
+      --text-muted: #57606A;
+      --border-subtle: #E8E6DF;
+      --accent: #1E3A8A;
+      --accent-soft: #EEF3FA;
+      --code-bg: #F3F1EA;
+      --link: #1E3A8A;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --primary: #60A5FA;
-        --primary-hover: #93C5FD;
-        --primary-soft: #1E293B;
-        --text-main: #F1F5F9;
-        --text-muted: #94A3B8;
-        --bg-page: #0B0F19;
-        --bg-card: #151D2C;
-        --border: #233044;
-        --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-        --badge-bg: #1E2E4A;
-        --badge-text: #93C5FD;
-        --badge-border: #2B4570;
+        --bg-page: #121417;
+        --bg-paper: #191B1F;
+        --text-ink: #E6EDF3;
+        --text-muted: #8D96A0;
+        --border-subtle: #2C3138;
+        --accent: #60A5FA;
+        --accent-soft: #1A2436;
+        --code-bg: #22262C;
+        --link: #60A5FA;
       }
     }
 
@@ -46,37 +40,42 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-      line-height: 1.65;
-      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      line-height: 1.75;
+      color: var(--text-ink);
       background-color: var(--bg-page);
-      padding: 24px 16px 64px 16px;
+      padding: 40px 20px 80px 20px;
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 820px;
+    .document-container {
+      max-width: 720px;
       margin: 0 auto;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 48px 44px;
     }
 
-    /* Header */
-    header {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px 28px;
-      box-shadow: var(--card-shadow);
-      margin-bottom: 24px;
-      position: relative;
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 12px 60px 12px;
+      }
+      .document-container {
+        padding: 28px 20px;
+        border-radius: 8px;
+      }
     }
 
-    .header-top {
+    /* Header & Branding */
+    .doc-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 20px;
+      gap: 20px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 36px;
     }
 
     .branding {
@@ -86,192 +85,141 @@
     }
 
     .logo-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 12px;
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
       flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--border-subtle);
     }
 
-    .app-title {
-      font-size: 1.75rem;
+    .app-name {
+      font-size: 1.5rem;
       font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
+      color: var(--text-ink);
+      line-height: 1.2;
     }
 
     .app-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
+      margin-top: 4px;
     }
 
-    /* Language Switcher */
+    /* Minimalist Language Switcher */
     .lang-switcher {
       display: inline-flex;
-      background: var(--bg-page);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 4px;
-      gap: 4px;
+      background: var(--code-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 2px;
+      flex-shrink: 0;
     }
 
     .lang-btn {
       border: none;
       background: transparent;
-      padding: 6px 14px;
-      font-size: 0.88rem;
+      padding: 5px 12px;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-muted);
-      border-radius: 20px;
+      border-radius: 4px;
       cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .lang-btn:hover {
-      color: var(--text-main);
+      transition: all 0.15s ease;
     }
 
     .lang-btn.active {
-      background: var(--primary);
-      color: #FFFFFF;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      background: var(--bg-paper);
+      color: var(--accent);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
     }
 
-    .meta-bar {
+    /* Metadata strip */
+    .meta-strip {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      font-size: 0.88rem;
+      gap: 16px;
+      font-size: 0.85rem;
       color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      padding-top: 18px;
+      margin-bottom: 28px;
     }
 
-    .meta-item strong {
-      color: var(--text-main);
+    .meta-strip span strong {
+      color: var(--text-ink);
+      font-weight: 600;
     }
 
-    /* Quick Guarantees Grid */
-    .guarantees-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .guarantee-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      text-align: center;
-      box-shadow: var(--card-shadow);
-    }
-
-    .guarantee-title {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .guarantee-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    /* Main Content Article */
-    article {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px 32px;
-      box-shadow: var(--card-shadow);
-      margin-bottom: 24px;
-    }
-
-    h1.policy-title {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-
-    p.lead-text {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 32px;
+    /* Lead paragraph */
+    .lead-box {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.02rem;
+      color: var(--text-ink);
+      margin-bottom: 36px;
       line-height: 1.7;
     }
 
-    section {
-      margin-bottom: 36px;
-      scroll-margin-top: 24px;
+    .lead-box strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.08rem;
     }
 
-    section:last-of-type {
-      margin-bottom: 0;
+    /* Sections */
+    section {
+      margin-bottom: 32px;
+    }
+
+    h1.doc-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--text-ink);
     }
 
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+      color: var(--text-ink);
+      margin-bottom: 12px;
       padding-bottom: 6px;
-      border-bottom: 2px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     p {
       margin-bottom: 14px;
-      font-size: 0.98rem;
+      color: var(--text-ink);
     }
 
     ul, ol {
-      margin: 12px 0 18px 24px;
-      font-size: 0.98rem;
+      margin: 10px 0 18px 24px;
     }
 
     li {
       margin-bottom: 8px;
+      color: var(--text-ink);
     }
 
-    strong {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .callout {
-      background: var(--badge-bg);
-      border: 1px solid var(--badge-border);
-      border-left: 4px solid var(--primary);
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 18px 0;
-      font-size: 0.92rem;
-      color: var(--badge-text);
-      line-height: 1.55;
+    li strong {
+      color: var(--text-ink);
     }
 
     code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
       font-size: 0.88em;
-      background: var(--bg-page);
-      border: 1px solid var(--border);
+      background: var(--code-bg);
       padding: 2px 6px;
       border-radius: 4px;
+      border: 1px solid var(--border-subtle);
     }
 
     a {
-      color: var(--primary);
+      color: var(--link);
       text-decoration: none;
-      font-weight: 500;
-      word-break: break-word;
     }
 
     a:hover {
@@ -280,349 +228,277 @@
 
     /* Footer */
     footer {
-      text-align: center;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      padding: 24px 0 12px 0;
-    }
-
-    footer a {
-      color: var(--text-muted);
-    }
-
-    footer a:hover {
-      color: var(--primary);
-    }
-
-    .action-links {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
       display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 8px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-actions a {
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .footer-actions a:hover {
+      color: var(--text-ink);
     }
 
     /* Print styling */
     @media print {
       body {
-        background: #FFFFFF;
-        color: #000000;
-        padding: 0;
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        padding: 0 !important;
       }
-      header, article {
-        box-shadow: none;
-        border: none;
-        padding: 0;
-        margin-bottom: 20px;
+      .document-container {
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
       }
-      .lang-switcher, .action-links {
-        display: none;
+      .lang-switcher, .footer-actions {
+        display: none !important;
+      }
+      .lead-box {
+        background: #F4F4F4 !important;
+        border-left: 3px solid #000000 !important;
+      }
+      a {
+        color: #000000 !important;
+        text-decoration: none !important;
       }
     }
 
-    /* Content Visibility by Language */
-    [data-lang] {
-      display: none;
+    /* Language display toggle */
+    html[data-active-lang="en"] [data-lang="ja"] {
+      display: none !important;
     }
-    html[data-active-lang="en"] [data-lang="en"] {
-      display: block;
-    }
-    html[data-active-lang="ja"] [data-lang="ja"] {
-      display: block;
-    }
-    html[data-active-lang="en"] span[data-lang="en"],
-    html[data-active-lang="ja"] span[data-lang="ja"] {
-      display: inline;
+    html[data-active-lang="ja"] [data-lang="en"] {
+      display: none !important;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="document-container">
 
     <!-- Header -->
-    <header>
-      <div class="header-top">
-        <div class="branding">
-          <!-- Yaku Play Store Icon -->
-          <img class="logo-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAeF0lEQVR4nO3daZxdVZno4bcqgQxkrkwQAokQEhJCIBAIMzJDg6DYDUiDKALCFUmjBhHFEdDbguDY2LdpL1fbbqXpVrxccUQ0AjIrgyCjzCBkZEhSqdwP/oquxkqoJGevtc9Zz/Mxkv0uKpj9P2sPp23Jy52rAwAoSnvuBQAA6QkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAgkAACiQAACAAvXPvYBmNPOtn9/gY9zwrbMbsBIAuo0c7DPtuhAAa9GIEz0AaSx8uavXXxcGvRMAPTjhA7Se14eBIPiz4gPASR+gLD2DoOQYKDYAnPgB6I6BEkOgqABw0gegNyXuChQRAE78APRVKbsCLR0ATvwArK9WD4HW/LcKJ38AGmNNjxc2u5bbAXDiB6DRWnE3oHX+TcLJH4BqtdJuQEvsADjxA5BKq+wGNPfqw8kfgDyafTegqQPAyR+AnJo5ApryEoATPwB10ayXBJprteHkD0A9NdtuQFMFgJM/AHXWTBHQNAHg5A9AM2iWCGiKAHDyB6CZNEME1D4AnPwBaEZ1j4BaB4CTPwDNrM4RUNsAcPIHoBXUNQJqGwAAQHVqGQA+/QPQSuq4C1C7AHDyB6AV1S0CahUATv4AtLI6RUCtAgAASKM2AeDTPwAlqMsuQC0CwMkfgJLUIQJqEQAAQFrZA8CnfwBKlHsXIGsAOPkDULKcEZB9BwAASC9bAPj0DwD5dgHsAABAgbIEgE//APBfcuwC2AEAgAIJAAAoUPIAsP0PAH8p9WUAOwAAUKCkAeDTPwCsWcpdADsAAFAgAQAABUoWALb/AeCNpboMYAcAAAokAACgQAIAAAqUJABc/weAvktxH4AdAAAokAAAgAIJAAAokAAAgAIJAAAoUOUB4AkAAFh3VT8JYAcAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAAokAACgQAIAAArUP/cCoA5+8KMF8fHP/VPuZdTGXnNnxaUXnJV7GUCF7AAAQIHsAABJPPHUc3HkCR/OvQz64Jij9o/5Zx6fexlUzA4AABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABSof+4FQB2MHT0y9po7K/cyamPGtMm5lwBUTABAROwye3rsMnt67mUAJOMSAAAUSAAAQIEEAAAUSAAAQIEEAAAUSAAAQIE8Bgi0pCsuOzf3Ehqmc1VXnHr253IvgxYjAICWNGu7KbmX0DBdXV25l0ALcgkAAApkB4CW9NyfFsahx3wg9zJa1k6zpsXXL5mfexnABrADAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUCABAAAFEgAAUKD+uRcAVejX3h4TJ4zNvYyWNXb0iNxLADaQAKAldYwaHv955WdzLwOgtlwCAIACCQAAKJAAAIACCQAAKJAAAIACCQAAKJAAAIACCQAAKJAAAIACeRMgxbvp1nvivAsvz72M2vnGlz7qdcrQwgQAxevsXBWLFi/LvYza6erqyr0EoEIuAQBAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgQQAABRIAABAgXwXANCSdjnoPbmX0DCrV+deAa1IAAAtadUqX2YEa+MSAAAUSAAAQIEEAAAUSAAAQIEEAAAUSAAAQIE8Bkjx9py7fdz20ytyLwMgKTsAAFAgAQAABRIAQBJeZwv1IgCAJLq6vJoX6kQAAEl02QKAWhEAQBJdvpwHakUAAEl0rRYAUCcCAEiiq8slAKgTAQAk4SZAqBcBACThJkCoF68Cpni/uum3cdZ5l+ZeRu1c/Y0LY8uJ4xt2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" alt="Yaku Logo" width="54" height="54">
-          <div>
-            <div class="app-title">Yaku (訳)</div>
-            <div class="app-subtitle">
-              <span data-lang="en">Offline Japanese-English &amp; Kokugo Dictionary</span>
-              <span data-lang="ja">オフライン日本語辞書・和英・国語辞典</span>
-            </div>
+    <header class="doc-header">
+      <div class="branding">
+        <img class="logo-icon" src="icon.png" alt="Yaku Logo" width="52" height="52">
+        <div>
+          <div class="app-name">Yaku (訳)</div>
+          <div class="app-subtitle">
+            <span data-lang="en">Offline Japanese-English &amp; Kokugo Dictionary</span>
+            <span data-lang="ja">オフライン日本語・英和・国語辞書</span>
           </div>
-        </div>
-
-        <!-- Language Switcher -->
-        <div class="lang-switcher" role="radiogroup" aria-label="Language">
-          <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-          <button id="btn-ja" class="lang-btn" onclick="setLanguage('ja')">日本語</button>
         </div>
       </div>
 
-      <!-- Metadata Bar -->
-      <div class="meta-bar">
-        <div class="meta-item">
-          <span data-lang="en"><strong>Effective Date:</strong> August 2026</span>
-          <span data-lang="ja"><strong>施行日:</strong> 2026年8月</span>
-        </div>
-        <div class="meta-item">
-          <span data-lang="en"><strong>Application:</strong> Yaku (com.yaku.jiten)</span>
-          <span data-lang="ja"><strong>対象アプリ:</strong> Yaku (com.yaku.jiten)</span>
-        </div>
-        <div class="meta-item">
-          <span data-lang="en"><strong>Platform:</strong> Android (Google Play)</span>
-          <span data-lang="ja"><strong>プラットフォーム:</strong> Android (Google Play)</span>
-        </div>
+      <!-- Language Selector -->
+      <div class="lang-switcher" role="radiogroup" aria-label="Language selection">
+        <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="btn-ja" class="lang-btn" onclick="setLanguage('ja')">日本語</button>
       </div>
     </header>
 
-    <!-- 4 Key Guarantees Summary Grid -->
-    <div class="guarantees-grid">
-      <div class="guarantee-card">
-        <div class="guarantee-title">
-          <span data-lang="en">100% Offline Core</span>
-          <span data-lang="ja">完全オフライン</span>
-        </div>
-        <div class="guarantee-desc">
-          <span data-lang="en">Dictionary search, pitch &amp; kanji require zero internet.</span>
-          <span data-lang="ja">辞書検索・ピッチ・筆順は通信なしで動作。</span>
-        </div>
-      </div>
-      <div class="guarantee-card">
-        <div class="guarantee-title">
-          <span data-lang="en">Zero Telemetry</span>
-          <span data-lang="ja">追跡・分析ゼロ</span>
-        </div>
-        <div class="guarantee-desc">
-          <span data-lang="en">No analytics, crash loggers, or user profiling.</span>
-          <span data-lang="ja">アナリティクスやクラッシュ収集SDK不使用。</span>
-        </div>
-      </div>
-      <div class="guarantee-card">
-        <div class="guarantee-title">
-          <span data-lang="en">Local Storage Only</span>
-          <span data-lang="ja">端末内限定保存</span>
-        </div>
-        <div class="guarantee-desc">
-          <span data-lang="en">Bookmarks, lists &amp; history stay inside your device.</span>
-          <span data-lang="ja">ブックマークや履歴は外部サーバーに送信されません。</span>
-        </div>
-      </div>
-      <div class="guarantee-card">
-        <div class="guarantee-title">
-          <span data-lang="en">No Advertisements</span>
-          <span data-lang="ja">広告完全ゼロ</span>
-        </div>
-        <div class="guarantee-desc">
-          <span data-lang="en">No ad SDKs, banners, trackers, or data brokers.</span>
-          <span data-lang="ja">広告SDKや第三者へのデータ売買は一切ありません。</span>
-        </div>
-      </div>
+    <!-- Metadata Bar -->
+    <div class="meta-strip">
+      <span>
+        <span data-lang="en"><strong>Effective:</strong> September 2026</span>
+        <span data-lang="ja"><strong>改定日:</strong> 2026年9月</span>
+      </span>
+      <span>
+        <span data-lang="en"><strong>Application:</strong> Yaku (<code>com.yaku.jiten</code>)</span>
+        <span data-lang="ja"><strong>対象アプリ:</strong> Yaku (<code>com.yaku.jiten</code>)</span>
+      </span>
+      <span>
+        <span data-lang="en"><strong>Platform:</strong> Android</span>
+        <span data-lang="ja"><strong>プラットフォーム:</strong> Android</span>
+      </span>
     </div>
 
-    <!-- Main Content Article -->
-    <article>
+    <!-- ================= ENGLISH CONTENT ================= -->
+    <article data-lang="en">
+      <h1 class="doc-title">Privacy Policy</h1>
 
-      <!-- ================= ENGLISH CONTENT ================= -->
-      <div data-lang="en">
-        <h1 class="policy-title">Privacy Policy for Yaku (訳)</h1>
-        <p class="lead-text">
-          Yaku is an offline-first Japanese and English dictionary and kanji study utility built for Android.
-          We firmly believe learning tools should respect personal privacy. Yaku is engineered so that your study habits, search history, vocabulary lists, and preferences remain strictly private and under your exclusive control on your personal device.
-        </p>
-
-        <!-- Section 1 -->
-        <section id="en-sec1">
-          <h2>1. Offline-First Architecture &amp; Zero Telemetry</h2>
-          <ul>
-            <li><strong>No Third-Party Trackers or Analytics:</strong> Yaku does not include any analytics libraries, advertising SDKs, behavioral trackers, or device fingerprinting tools (such as Firebase Analytics, Google Analytics, Mixpanel, AppsFlyer, Facebook SDK, etc.).</li>
-            <li><strong>No Remote Telemetry or Crash Logs:</strong> Yaku does not send background diagnostic logs, search keywords, or device specifications to external servers.</li>
-            <li><strong>No User Profiling:</strong> We never build profiles of your search habits, study level, or dictionary usage.</li>
-          </ul>
-        </section>
-
-        <!-- Section 2 -->
-        <section id="en-sec2">
-          <h2>2. Local-Only Data Storage</h2>
-          <p>All data required to operate Yaku, as well as all user-generated data, is stored exclusively in your device's private application sandbox:</p>
-          <ol>
-            <li><strong>Pre-packaged Dictionaries:</strong> JMdict, KANJIDIC2, RADKFILE/KRADFILE, KanjiVG stroke vectors, Japanese Wiktionary monolingual entries, Japanese WordNet relations, Tatoeba example sentences, and Kanjium pitch accents are stored locally on your device in the bundled dictionary database (<code>dictionary.db</code>).</li>
-            <li><strong>User Data:</strong> Bookmarked vocabulary, kanji, custom study lists, and application preferences (theme, results per page, pitch display style, dataset toggles) reside strictly on-device.</li>
-            <li><strong>No Cloud Synchronization:</strong> None of your local user data is uploaded to Yaku servers.</li>
-            <li><strong>Optional Android Backup:</strong> If your device has Android Auto Backup enabled, Google may back up your settings and bookmark lists (not the dictionary database) according to your device backup settings. You can also export or import settings and lists manually from <em>Settings &rarr; Backup &amp; Restore</em> as a standard zip archive.</li>
-            <li><strong>Search from Other Apps (optional):</strong> If you enable "Search in Yaku from other apps" in Settings, text you select in another application can be sent to Yaku only when you explicitly choose Yaku from the Android system process-text menu. This is handled on-device as a local search query. Yaku does not monitor your clipboard.</li>
-          </ol>
-        </section>
-
-        <!-- Section 3 -->
-        <section id="en-sec3">
-          <h2>3. Network Connections &amp; Scope</h2>
-          <p>Yaku does not require an active internet connection for any core dictionary lookup, pitch accent visualization, or kanji stroke order animation. The only situations where network connectivity may be involved are strictly limited to:</p>
-          <ol>
-            <li>
-              <strong>Payment Processing &amp; Entitlement Verification:</strong>
-              Optional Yaku Supporter extras (8 traditional color palettes, Anki export customizer, supporter badge) are purchased as a one-time Google Play product. Transactions and license validation are handled exclusively through the official Google Play Billing API. A device-bound, encrypted cache of your purchase status is stored locally so the unlock remains active while offline. The dictionary, default JP-front Anki export, study lists, and backup zip remain permanently free.
-            </li>
-            <li>
-              <strong>User-Initiated Feedback / Contact:</strong>
-              If you tap <strong>Send feedback</strong> or <strong>Report a mismatch</strong> in the About screen, Yaku opens a CryptPad form in your system browser. About also offers an email contact (<code>contact.yaku.jiten@proton.me</code>), which opens your mail app via <code>mailto:</code>. Once you initiate feedback or contact, data handling and privacy are governed by your email provider and CryptPad's privacy policy. Yaku does not attach or upload any diagnostic app data.
-            </li>
-          </ol>
-        </section>
-
-        <!-- Section 4 -->
-        <section id="en-sec4">
-          <h2>4. Information Sharing and Third Parties</h2>
-          <ul>
-            <li>We do not sell, rent, monetize, or trade user data with any third parties or data brokers.</li>
-            <li>We do not share information with advertisers or marketing networks.</li>
-            <li>No third party has access to your local search queries or saved lists.</li>
-            <li>No account creation or login credentials are required to use any feature of Yaku.</li>
-          </ul>
-        </section>
-
-        <!-- Section 5 -->
-        <section id="en-sec5">
-          <h2>5. User Rights, Data Retention, and Deletion</h2>
-          <ul>
-            <li><strong>Full Data Ownership:</strong> You retain complete ownership of all data generated while using Yaku.</li>
-            <li><strong>Data Export &amp; Deletion:</strong> You can modify, export, or clear bookmarks, custom lists, and application preferences at any time from within the app (<em>Lists</em> and <em>Settings &rarr; Backup &amp; Restore</em>).</li>
-            <li><strong>App Uninstallation:</strong> Uninstalling Yaku immediately and permanently erases all local application databases, preferences, and cached assets from your device.</li>
-          </ul>
-        </section>
-
-        <!-- Section 6 -->
-        <section id="en-sec6">
-          <h2>6. Open Source Datasets &amp; Attributions</h2>
-          <p>
-            Yaku utilizes open linguistic datasets maintained by the linguistics community (EDRDG, KanjiVG Project, NICT, Kaikki.org / Wiktionary, Tatoeba, Wadoku/Kanjium). Full attribution, licenses, and maintainer information are documented in the <strong>About Yaku</strong> screen within the app and in the repository documentation.
-          </p>
-        </section>
-
-        <!-- Section 7 -->
-        <section id="en-sec7">
-          <h2>7. Changes to This Privacy Policy</h2>
-          <p>
-            If any changes are made to this Privacy Policy (for example, to reflect new optional features), the updated policy will be included within the application and published in this repository with an updated revision date.
-          </p>
-        </section>
-
-        <!-- Section 8 -->
-        <section id="en-sec8">
-          <h2>8. Contact</h2>
-          <p>For questions, feedback, or concerns regarding this Privacy Policy:</p>
-          <ul>
-            <li><strong>Repository:</strong> <a href="https://github.com/yaku-project/privacy-policy" target="_blank" rel="noopener noreferrer">https://github.com/yaku-project/privacy-policy</a></li>
-            <li><strong>Email:</strong> <a href="mailto:contact.yaku.jiten@proton.me">contact.yaku.jiten@proton.me</a></li>
-          </ul>
-        </section>
+      <div class="lead-box">
+        <strong>Privacy First &amp; Offline Design</strong>
+        Yaku is designed from the ground up to protect your privacy. We believe a dictionary and study utility should never track you.
       </div>
 
-      <!-- ================= JAPANESE CONTENT ================= -->
-      <div data-lang="ja">
-        <h1 class="policy-title">Yaku (訳) プライバシーポリシー</h1>
-        <p class="lead-text">
-          Yaku は Android 向けに開発されたオフラインファーストの日本語・英和・国語辞書および漢字学習アプリです。
-          私たちは、学習ツールは利用者のプライバシーを最大限尊重すべきであると強く確信しています。利用者の検索履歴、学習単語帳、設定情報は完全にプライベートであり、お客様ご自身の端末内でのみ管理されます。
+      <section>
+        <h2>1. Zero Tracking, Analytics &amp; Telemetry</h2>
+        <ul>
+          <li>No analytics frameworks (e.g., Google Analytics, Firebase, Mixpanel, AppsFlyer) are embedded.</li>
+          <li>No advertising SDKs, ad identifiers, or user profiling tools.</li>
+          <li>No crash reporting telemetry that transmits device identifiers, usage patterns, or crash dumps to remote servers.</li>
+          <li>We never track what words you search, which kanji you view, or how you use the app.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. Local-Only Data Storage</h2>
+        <ul>
+          <li>All core dictionary databases (JMdict, KANJIDIC2, KanjiVG, Tatoeba) as well as the optional Japanese Names dictionary (JMnedict) reside locally on your device.</li>
+          <li>User data — including bookmarked words, study lists, and settings preferences — is stored exclusively inside your device's private app storage (<code>user.db</code>).</li>
+          <li>None of your personal data or study history is synced to any remote server.</li>
+          <li>If your device has Android backup enabled, Google may back up your settings and bookmark lists (not the dictionary database) according to your device backup settings.</li>
+          <li>You can export or import settings and lists manually at any time via <strong>Settings &rarr; Backup &amp; Restore</strong>.</li>
+          <li>If you enable &ldquo;Search in Yaku from other apps&rdquo;, selected text is passed to Yaku only when you explicitly choose Yaku from the system text selection menu. Yaku does not monitor the clipboard.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Network Connections &amp; Scope</h2>
+        <p>Yaku functions offline. The only network connections the app may ever make are strictly limited to:</p>
+        <ol type="a">
+          <li>
+            <strong>Payment Processing:</strong> Optional one-time Yaku Supporter purchases (themes, supporter badge) are processed directly through the official Google Play Billing API. To maintain your unlocked status offline, an encrypted token is cached locally. The dictionary, Anki export (including custom templates), study lists, and backup features remain permanently free.
+          </li>
+          <li>
+            <strong>On-Demand Feature Delivery (Japanese Names Dictionary):</strong> If you choose to install the optional Japanese Names dictionary (covering ~740,000 entries from JMnedict), the data package is downloaded directly from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. Once downloaded, all names searches stay completely offline.
+          </li>
+          <li>
+            <strong>User-Initiated Feedback / Contact:</strong> If you tap &ldquo;Send feedback&rdquo; or &ldquo;Report a mismatch&rdquo; in the About screen, Yaku opens a CryptPad form in your web browser. Tapping &ldquo;Email&rdquo; opens your device's email client with <code>contact.yaku.jiten@proton.me</code>. Once you initiate feedback or contact, data handling and privacy are governed by your email provider and CryptPad's privacy policy. Yaku does not attach or upload any diagnostic app data.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4. No Data Sharing or Sale</h2>
+        <ul>
+          <li>We do not collect, buy, sell, rent, or trade your personal information.</li>
+          <li>No third-party data brokers have access to any application state or user preferences.</li>
+          <li>No account creation or login credentials are required to use any feature of Yaku.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. User Rights &amp; Complete Control</h2>
+        <ul>
+          <li>You retain full ownership and control of all your study data.</li>
+          <li>You can edit, export (to Anki <code>.apkg</code> or a standard zip backup), or permanently delete your bookmarks and custom lists at any time from Lists or Settings.</li>
+          <li>Uninstalling the app permanently purges all local data, preferences, and database files from your device.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Upstream Data Sources &amp; Licenses</h2>
+        <p>
+          Yaku is powered by open linguistic datasets maintained by dedicated communities and organizations:
+          EDRDG (JMdict, KANJIDIC2, JMnedict), KanjiVG Project, NICT (Japanese WordNet), Kaikki.org / Wiktionary, Tatoeba, and Wadoku/Kanjium.
+          Complete license terms and maintainer attributions are documented directly within the app's <strong>About Yaku</strong> screen.
         </p>
+      </section>
 
-        <!-- Section 1 (JA) -->
-        <section id="ja-sec1">
-          <h2>1. トラッキング・分析・テレメトリの完全不使用</h2>
-          <ul>
-            <li><strong>アナリティクス・トラッカー不使用:</strong> Google Analytics、Firebase、Mixpanel、AppsFlyer、Facebook SDK などの行動分析ライブラリや広告SDKは一切含まれていません。</li>
-            <li><strong>遠隔ログ・クラッシュ追跡なし:</strong> 検索したキーワード、端末情報、診断ログなどを外部サーバーに送信することはありません。</li>
-            <li><strong>ユーザープロファイリングなし:</strong> 学習レベルや辞書の使用頻度などに関する行動プロファイルを作成することはありません。</li>
-          </ul>
-        </section>
+      <section>
+        <h2>7. Contact</h2>
+        <p>
+          For any questions or concerns regarding this privacy policy, please contact:
+          <br>
+          <a href="mailto:contact.yaku.jiten@proton.me"><strong>contact.yaku.jiten@proton.me</strong></a>
+        </p>
+      </section>
+    </article>
 
-        <!-- Section 2 (JA) -->
-        <section id="ja-sec2">
-          <h2>2. 端末内（ローカル）限定のデータ保存</h2>
-          <p>Yaku の動作に必要なデータ、およびお客様が作成したデータは、すべて端末内の専用ストレージ（アプリサンドボックス）にのみ保存されます。</p>
-          <ol>
-            <li><strong>同梱辞書データ:</strong> JMdict、KANJIDIC2、KanjiVG筆順図、Wiktionary日本語定義、日本語WordNet類語、Tatoeba日英例文、Kanjiumアクセント情報はすべて端末内の辞書データベース（<code>dictionary.db</code>）にローカル保存されています。</li>
-            <li><strong>ユーザーデータ:</strong> ブックマークした単語・漢字、カスタム学習リスト、および設定項目（テーマ、表示件数、ピッチ表示形式、データセット切り替え）は端末内にのみ保持されます。</li>
-            <li><strong>クラウド同期なし:</strong> ローカルのユーザーデータが Yaku のサーバーにアップロードされることはありません。</li>
-            <li><strong>任意の Android 自動バックアップ:</strong> 端末のバックアップ機能が有効な場合、端末側の設定に基づき Google が設定とブックマーク（辞書データベースを除く）をバックアップすることがあります。また、「設定 &rarr; バックアップと復元」から zip 形式で手動エクスポート・インポートが可能です。</li>
-            <li><strong>他アプリからの検索（任意）:</strong> 「他のアプリから Yaku で検索」を有効にした場合、システムのテキスト選択メニューで明示的に Yaku を選択したときのみテキストが渡されます。クリップボードを常時監視することはありません。</li>
-          </ol>
-        </section>
+    <!-- ================= JAPANESE CONTENT ================= -->
+    <article data-lang="ja">
+      <h1 class="doc-title">プライバシーポリシー</h1>
 
-        <!-- Section 3 (JA) -->
-        <section id="ja-sec3">
-          <h2>3. ネットワーク通信の範囲と方針</h2>
-          <p>Yaku の辞書検索、アクセント表示、筆順アニメーションなどの基本機能は完全にオフラインで動作し、インターネット通信を必要としません。通信が発生するケースは以下のみに限定されます。</p>
-          <ol>
-            <li>
-              <strong>決済処理および購入状況の確認:</strong>
-              任意の Yaku サポーター機能（8色の伝統和色テーマ、Anki 出力詳細設定、サポーターバッジ）は公式の Google Play Billing API 経由で1回限りの買い切り購入として処理されます。オフライン時でもアンロック状態を維持するため、購入ステータスの暗号化キャッシュが端末内に安全に保存されます。辞書本体、標準の Anki エクスポート、学習リスト、バックアップ機能はずっと無料でご利用いただけます。
-            </li>
-            <li>
-              <strong>ユーザー起点のフィードバック・お問い合わせ:</strong>
-              「Yaku について」画面で「フィードバックを送る」または「不一致を報告」をタップすると、ブラウザ上で CryptPad フォームが開きます。また、「メール」は <code>contact.yaku.jiten@proton.me</code> を <code>mailto:</code> でメールアプリに渡します。送信後のデータ管理は、ご利用のメール事業者および CryptPad のプライバシーポリシーに従います。アプリが診断情報を自動送信することはありません。
-            </li>
-          </ol>
-        </section>
-
-        <!-- Section 4 (JA) -->
-        <section id="ja-sec4">
-          <h2>4. 個人情報の提供・第三者販売の禁止</h2>
-          <ul>
-            <li>利用者の個人データを収集、販売、賃貸、または取引することは一切ありません。</li>
-            <li>広告事業者やデータブローカーに情報を提供することはありません。</li>
-            <li>第三者がローカルの検索履歴や保存リストにアクセスすることはありません。</li>
-            <li>アプリの全機能をご利用いただくにあたり、アカウント登録やログインは一切不要です。</li>
-          </ul>
-        </section>
-
-        <!-- Section 5 (JA) -->
-        <section id="ja-sec5">
-          <h2>5. ユーザーの権利とデータ管理</h2>
-          <ul>
-            <li><strong>完全なデータ所有権:</strong> Yaku の使用によって生成されたすべてのデータはお客様に帰属します。</li>
-            <li><strong>データのエクスポートと削除:</strong> 保存した単語やリスト、設定情報は「リスト」画面または「設定 &rarr; バックアップと復元」からいつでも編集・出力・削除できます。</li>
-            <li><strong>アプリのアンインストール:</strong> アプリをアンインストールすると、端末内のすべてのローカルデータ、設定、キャッシュファイルが完全に消去されます。</li>
-          </ul>
-        </section>
-
-        <!-- Section 6 (JA) -->
-        <section id="ja-sec6">
-          <h2>6. オープンソース辞書データと帰属</h2>
-          <p>
-            Yaku は日本語教育・言語学コミュニティによって保守されているオープンデータセット（EDRDG、KanjiVG、NICT、Kaikki.org、Tatoeba、Wadoku/Kanjium）を活用しています。詳細なライセンスおよび権利者表記はアプリ内の「Yaku について」画面およびリポジトリに記載されています。
-          </p>
-        </section>
-
-        <!-- Section 7 (JA) -->
-        <section id="ja-sec7">
-          <h2>7. 本プライバシーポリシーの改定</h2>
-          <p>
-            機能追加等に伴い本ポリシーを改定する場合は、アプリ内および本リポジトリにて改定日を明記の上、更新版を公開いたします。
-          </p>
-        </section>
-
-        <!-- Section 8 (JA) -->
-        <section id="ja-sec8">
-          <h2>8. お問い合わせ</h2>
-          <p>本プライバシーポリシーに関するご質問やお問い合わせは、下記までお願いいたします。</p>
-          <ul>
-            <li><strong>GitHub リポジトリ:</strong> <a href="https://github.com/yaku-project/privacy-policy" target="_blank" rel="noopener noreferrer">https://github.com/yaku-project/privacy-policy</a></li>
-            <li><strong>メール:</strong> <a href="mailto:contact.yaku.jiten@proton.me">contact.yaku.jiten@proton.me</a></li>
-          </ul>
-        </section>
+      <div class="lead-box">
+        <strong>プライバシー保護とオフライン設計</strong>
+        Yaku はユーザーのプライバシーを最優先に設計されています。学習ツールや辞書アプリが利用者を追跡すべきではないと考えています。
       </div>
 
+      <section>
+        <h2>1. トラッキング・分析・テレメトリの完全不使用</h2>
+        <ul>
+          <li>アナリティクスSDK（Google Analytics、Firebase、Mixpanel、AppsFlyer等）は一切含まれていません。</li>
+          <li>広告SDK、広告識別子、行動プロファイリングツールは不使用です。</li>
+          <li>端末情報や利用ログ、クラッシュレポートを外部サーバーに送信する機能はありません。</li>
+          <li>検索した単語や閲覧した項目、利用頻度などの利用データを収集することは一切ありません。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. 端末内（ローカル）限定のデータ保存</h2>
+        <ul>
+          <li>基本辞書データベース（JMdict、KANJIDIC2、KanjiVG、Tatoeba）およびオプションの人名・地名等辞書（JMnedict）は、すべて端末内に保存されます。</li>
+          <li>ブックマーク、学習リスト、設定などのユーザーデータは端末内の専用ストレージ（<code>user.db</code>）にのみ保存されます。</li>
+          <li>ユーザーデータが Yaku の外部サーバーに同期されることはありません。</li>
+          <li>端末の Android バックアップが有効な場合、Google が設定とブックマークリスト（辞書データベースを除く）を端末のバックアップ設定に従ってバックアップする場合があります。</li>
+          <li><strong>設定 &rarr; バックアップと復元</strong>から、設定とリストを手動でいつでも zip ファイルとして書き出し・読み込みが可能です。</li>
+          <li>「他のアプリから Yaku で検索」を有効にした場合、システムのテキスト選択メニューで Yaku を選択したときのみテキストが渡されます。クリップボードを常時監視することはありません。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. ネットワーク通信の範囲と方針</h2>
+        <p>Yaku の辞書機能はオフラインで動作します。ネットワーク接続が発生するケースは以下のみに限定されます:</p>
+        <ol type="a">
+          <li>
+            <strong>決済処理:</strong> 任意の Yaku サポーター（テーマ、サポーターバッジ）の買い切り購入は、公式の Google Play Billing API のみで処理されます。オフライン環境でもアンロック状態を維持するため、購入ステータスの暗号化されたキャッシュが端末内に保存されます。辞書、Anki エクスポート（詳細設定含む）、学習リスト機能、およびバックアップ機能は引き続き無料で利用できます。
+          </li>
+          <li>
+            <strong>オンデマンド配信（人名・地名等の固有名詞辞書）:</strong> オプションの人名・地名等の固有名詞辞書（JMnedict、約74万語）の利用を選択した場合、データパッケージは Google Play Asset Delivery を通じて Google Play から直接ダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ダウンロード完了後は、すべてオフラインで動作します。
+          </li>
+          <li>
+            <strong>ユーザー起点のフィードバック / 連絡:</strong> 「Yaku について」画面で「フィードバックを送る」または「不一致を報告」をタップすると、ブラウザに CryptPad フォームが開きます。「メール」は <code>contact.yaku.jiten@proton.me</code> を mailto: でメールアプリに渡します。フィードバックや連絡を開始した後のデータ取り扱いやプライバシーは、ご利用のメールプロバイダおよび CryptPad のプライバシーポリシーに準拠します。Yaku が診断アプリデータを添付またはアップロードすることはありません。
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4. 個人情報の提供・第三者販売の禁止</h2>
+        <ul>
+          <li>個人情報の収集、売買、第三者への開示は行いません。</li>
+          <li>データブローカーや外部事業者にアクセス権を与えることはありません。</li>
+          <li>アプリ利用にあたりアカウント登録やログインは一切不要です。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. ユーザーの権利とデータ管理</h2>
+        <ul>
+          <li>すべての学習データの完全な所有権と管理権はお客様にあります。</li>
+          <li>ブックマークやリストは、リスト画面または設定画面からいつでも編集・書き出し（Anki <code>.apkg</code> / zip）・削除できます。</li>
+          <li>アプリをアンインストールすると、端末内の全ローカルデータ、設定、辞書ファイルが完全に消去されます。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. オープンソースデータと著作権表示</h2>
+        <p>
+          Yaku はオープン言語コミュニティの成果を活用しています。EDRDG（JMdict、KANJIDIC2、JMnedict）、KanjiVG プロジェクト、NICT（日本語WordNet）、Kaikki.org / Wiktionary、Tatoeba、Wadoku/Kanjium の各プロジェクトに深く感謝申し上げます。詳細なライセンスおよび権利者表記はアプリ内の「<strong>Yaku について</strong>」画面に記載されています。
+        </p>
+      </section>
+
+      <section>
+        <h2>7. お問い合わせ</h2>
+        <p>
+          本プライバシーポリシーに関するご質問やお問い合わせは、下記まで直接ご連絡ください。
+          <br>
+          <a href="mailto:contact.yaku.jiten@proton.me"><strong>contact.yaku.jiten@proton.me</strong></a>
+        </p>
+      </section>
     </article>
 
     <!-- Footer -->
     <footer>
-      <div>&copy; 2026 Yaku Project. All rights reserved.</div>
-      <div class="action-links">
-        <a href="https://github.com/yaku-project/privacy-policy" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-        <span>&bull;</span>
-        <a href="javascript:window.print()">Print / Save as PDF</a>
+      <div>
+        <span data-lang="en">Last updated: September 2026 &bull; Yaku Project</span>
+        <span data-lang="ja">最終更新: 2026年9月 &bull; Yaku Project</span>
+      </div>
+      <div class="footer-actions">
+        <a href="javascript:window.print()">
+          <span data-lang="en">Print / Save as PDF</span>
+          <span data-lang="ja">印刷 / PDFとして保存</span>
+        </a>
       </div>
     </footer>
 
@@ -651,18 +527,18 @@
       } catch (e) {}
     }
 
-    // Auto-detect browser language or read saved preference
+    // Initialize from preference or browser language
     (function () {
-      var saved = null;
+      var savedLang = null;
       try {
-        saved = localStorage.getItem('yaku_privacy_lang');
+        savedLang = localStorage.getItem('yaku_privacy_lang');
       } catch (e) {}
 
-      if (saved === 'ja' || saved === 'en') {
-        setLanguage(saved);
+      if (savedLang === 'ja' || savedLang === 'en') {
+        setLanguage(savedLang);
       } else {
         var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-        if (userLang.indexOf('ja') === 0) {
+        if (userLang.startsWith('ja')) {
           setLanguage('ja');
         } else {
           setLanguage('en');
