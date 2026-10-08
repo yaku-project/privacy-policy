@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Yaku (訳)</title>
-  <meta name="description" content="Privacy Policy for Yaku (Yet Another Kokugo Utility) - Offline Japanese dictionary for Android with zero telemetry.">
+  <meta name="description" content="Privacy Policy for Yaku (Yet Another Kokugo Utility) - Offline Japanese dictionary for Android with no external telemetry.">
   <meta name="theme-color" content="#1E3A8A">
   <style>
     :root {
@@ -332,7 +332,7 @@
       </div>
 
       <section>
-        <h2>1. Zero Tracking, Analytics &amp; Telemetry</h2>
+        <h2>1. No Analytics or External Telemetry</h2>
         <ul>
           <li>No analytics frameworks (e.g., Google Analytics, Firebase, Mixpanel, AppsFlyer) are embedded.</li>
           <li>No advertising SDKs, ad identifiers, or user profiling tools.</li>
@@ -350,7 +350,7 @@
           <li>If your device has Android backup enabled, Google may back up your settings and bookmark lists (not the dictionary database) according to your device backup settings.</li>
           <li>You can export or import settings and lists manually at any time via <strong>Settings &rarr; Backup &amp; Restore</strong>.</li>
           <li>If you enable &ldquo;Search in Yaku from other apps&rdquo;, selected text is passed to Yaku only when you explicitly choose Yaku from the system text selection menu. Yaku does not monitor the clipboard.</li>
-          <li>Handwriting recognition runs 100% offline on-device using an embedded local model (DaKanji). No drawn strokes, coordinates, or recognition candidates are ever recorded, saved to disk, or transmitted over any network.</li>
+          <li>Handwriting recognition runs on-device using an embedded local model (DaKanji). No drawn strokes, coordinates, or recognition candidates are ever recorded, saved to disk, or transmitted over any network.</li>
         </ul>
       </section>
 
@@ -362,7 +362,10 @@
             <strong>Payment Processing:</strong> Optional one-time Yaku Supporter purchases (themes, supporter badge) are processed directly through the official Google Play Billing API. To maintain your unlocked status offline, an encrypted token is cached locally. The dictionary, Anki export (including custom templates), study lists, and backup features remain permanently free.
           </li>
           <li>
-            <strong>On-Demand Feature Delivery (Japanese Names Dictionary):</strong> If you choose to install the optional Japanese Names dictionary (covering ~740,000 entries from JMnedict), the data package is downloaded directly from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. Once downloaded, all names searches stay completely offline.
+            <strong>Main dictionary download:</strong> On Google Play installs, the main dictionary file is downloaded from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. After the file is on the device, lookups do not need another network connection.
+          </li>
+          <li>
+            <strong>On-Demand Feature Delivery (Japanese Names Dictionary):</strong> If you choose to install the optional Japanese Names dictionary (covering ~740,000 entries from JMnedict), the data package is downloaded directly from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. Once downloaded, names searches do not need another network connection.
           </li>
           <li>
             <strong>User-Initiated Feedback / Contact:</strong> If you tap &ldquo;Send feedback&rdquo; or &ldquo;Report a mismatch&rdquo; in the About screen, Yaku opens a CryptPad form in your web browser. Tapping &ldquo;Email&rdquo; opens your device's email client with <code>contact.yaku.jiten@proton.me</code>. Once you initiate feedback or contact, data handling and privacy are governed by your email provider and CryptPad's privacy policy. Yaku does not attach or upload any diagnostic app data.
@@ -417,7 +420,7 @@
       </div>
 
       <section>
-        <h2>1. トラッキング・分析・テレメトリの完全不使用</h2>
+        <h2>1. アナリティクスと外部テレメトリはありません</h2>
         <ul>
           <li>アナリティクスSDK（Google Analytics、Firebase、Mixpanel、AppsFlyer等）は一切含まれていません。</li>
           <li>広告SDK、広告識別子、行動プロファイリングツールは不使用です。</li>
@@ -435,7 +438,7 @@
           <li>端末の Android バックアップが有効な場合、Google が設定とブックマークリスト（辞書データベースを除く）を端末のバックアップ設定に従ってバックアップする場合があります。</li>
           <li><strong>設定 &rarr; バックアップと復元</strong>から、設定とリストを手動でいつでも zip ファイルとして書き出し・読み込みが可能です。</li>
           <li>「他のアプリから Yaku で検索」を有効にした場合、システムのテキスト選択メニューで Yaku を選択したときのみテキストが渡されます。クリップボードを常時監視することはありません。</li>
-          <li>手書き文字認識は、端末内に内蔵された軽量モデル（DaKanji）により100%オフラインで動作します。描かれたストローク、座標、認識候補が記録・保存されたり、ネットワーク経由で送信されることは一切ありません。</li>
+          <li>手書き文字認識は、端末内に内蔵されたモデル（DaKanji）により端末上で動作します。描かれたストローク、座標、認識候補が記録・保存されたり、ネットワーク経由で送信されることは一切ありません。</li>
         </ul>
       </section>
 
@@ -447,7 +450,10 @@
             <strong>決済処理:</strong> 任意の Yaku サポーター（テーマ、サポーターバッジ）の買い切り購入は、公式の Google Play Billing API のみで処理されます。オフライン環境でもアンロック状態を維持するため、購入ステータスの暗号化されたキャッシュが端末内に保存されます。辞書、Anki エクスポート（詳細設定含む）、学習リスト機能、およびバックアップ機能は引き続き無料で利用できます。
           </li>
           <li>
-            <strong>オンデマンド配信（人名・地名等の固有名詞辞書）:</strong> オプションの人名・地名等の固有名詞辞書（JMnedict、約74万語）の利用を選択した場合、データパッケージは Google Play Asset Delivery を通じて Google Play から直接ダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ダウンロード完了後は、すべてオフラインで動作します。
+            <strong>メイン辞書ファイルのダウンロード:</strong> Google Play からインストールした場合、メインの辞書ファイルは Play Asset Delivery を通じて Google Play からダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ファイルが端末にある状態では、検索に追加のネットワーク接続は不要です。
+          </li>
+          <li>
+            <strong>オンデマンド配信（人名・地名等の固有名詞辞書）:</strong> オプションの人名・地名等の固有名詞辞書（JMnedict、約74万語）の利用を選択した場合、データパッケージは Google Play Asset Delivery を通じて Google Play から直接ダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ダウンロード完了後、名前の検索に追加のネットワーク接続は不要です。
           </li>
           <li>
             <strong>ユーザー起点のフィードバック / 連絡:</strong> 「Yaku について」画面で「フィードバックを送る」または「不一致を報告」をタップすると、ブラウザに CryptPad フォームが開きます。「メール」は <code>contact.yaku.jiten@proton.me</code> を mailto: でメールアプリに渡します。フィードバックや連絡を開始した後のデータ取り扱いやプライバシーは、ご利用のメールプロバイダおよび CryptPad のプライバシーポリシーに準拠します。Yaku が診断アプリデータを添付またはアップロードすることはありません。
