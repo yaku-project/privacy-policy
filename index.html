@@ -309,8 +309,8 @@
     <!-- Metadata Bar -->
     <div class="meta-strip">
       <span>
-        <span data-lang="en"><strong>Effective:</strong> October 2026</span>
-        <span data-lang="ja"><strong>改定日:</strong> 2026年10月</span>
+        <span data-lang="en"><strong>Effective:</strong> November 2026</span>
+        <span data-lang="ja"><strong>改定日:</strong> 2026年11月</span>
       </span>
       <span>
         <span data-lang="en"><strong>Application:</strong> Yaku (<code>com.yaku.jiten</code>)</span>
@@ -362,7 +362,7 @@
             <strong>Payment Processing:</strong> Optional one-time Yaku Supporter purchases (themes, supporter badge) are processed directly through the official Google Play Billing API. To maintain your unlocked status offline, an encrypted token is cached locally. The dictionary, Anki export (including custom templates), study lists, and backup features remain permanently free.
           </li>
           <li>
-            <strong>Main dictionary download:</strong> On Google Play installs, the main dictionary file is downloaded from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. After the file is on the device, lookups do not need another network connection.
+            <strong>Core dictionary with app install:</strong> The main offline dictionary is bundled inside the Yaku app package (compressed in the APK or App Bundle Google Play delivers). Yaku does <strong>not</strong> use Play Asset Delivery to download the core dictionary separately. On first launch, Yaku copies the database once into private app storage so Room can open it; that one-time prepare step is local and does not use the network. Afterward, word and kanji lookups do not need a network connection. Google Play installs are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>; Yaku collects and transmits no personal identifiers, search queries, or telemetry during dictionary setup or use.
           </li>
           <li>
             <strong>On-Demand Feature Delivery (Japanese Names Dictionary):</strong> If you choose to install the optional Japanese Names dictionary (covering ~740,000 entries from JMnedict), the data package is downloaded directly from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. Once downloaded, names searches do not need another network connection.
@@ -450,7 +450,7 @@
             <strong>決済処理:</strong> 任意の Yaku サポーター（テーマ、サポーターバッジ）の買い切り購入は、公式の Google Play Billing API のみで処理されます。オフライン環境でもアンロック状態を維持するため、購入ステータスの暗号化されたキャッシュが端末内に保存されます。辞書、Anki エクスポート（詳細設定含む）、学習リスト機能、およびバックアップ機能は引き続き無料で利用できます。
           </li>
           <li>
-            <strong>メイン辞書ファイルのダウンロード:</strong> Google Play からインストールした場合、メインの辞書ファイルは Play Asset Delivery を通じて Google Play からダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ファイルが端末にある状態では、検索に追加のネットワーク接続は不要です。
+            <strong>メイン辞書（アプリ同梱）:</strong> メインのオフライン辞書データは、Yaku のアプリパッケージ（Google Play から配信される APK / App Bundle 内で圧縮同梱）に含まれます。メイン辞書を Play Asset Delivery で別途ダウンロードすることはありません。初回起動時に、Room が開けるようデータベースを端末内の専用ストレージへ一度だけコピーします。この準備は端末内のみで行われ、ネットワークは使用しません。その後、語彙・漢字の検索にネットワーク接続は不要です。Google Play からのインストールには <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されますが、辞書の準備や利用に伴い Yaku が個人を特定する情報、検索クエリ、テレメトリ等を収集・送信することはありません。
           </li>
           <li>
             <strong>オンデマンド配信（人名・地名等の固有名詞辞書）:</strong> オプションの人名・地名等の固有名詞辞書（JMnedict、約74万語）の利用を選択した場合、データパッケージは Google Play Asset Delivery を通じて Google Play から直接ダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ダウンロード完了後、名前の検索に追加のネットワーク接続は不要です。
@@ -499,8 +499,8 @@
     <!-- Footer -->
     <footer>
       <div>
-        <span data-lang="en">Last updated: October 2026 &bull; Yaku Project</span>
-        <span data-lang="ja">最終更新: 2026年10月 &bull; Yaku Project</span>
+        <span data-lang="en">Last updated: November 2026 &bull; Yaku Project</span>
+        <span data-lang="ja">最終更新: 2026年11月 &bull; Yaku Project</span>
       </div>
       <div class="footer-actions">
         <a href="javascript:window.print()">
