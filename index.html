@@ -293,8 +293,8 @@
         <div>
           <div class="app-name">Yaku (訳)</div>
           <div class="app-subtitle">
-            <span data-lang="en">Offline Japanese-English &amp; Kokugo Dictionary</span>
-            <span data-lang="ja">オフライン日本語・英和・国語辞書</span>
+            <span data-lang="en">Yet Another Kokugo Utility &bull; Offline Japanese-English &amp; Kokugo Dictionary</span>
+            <span data-lang="ja">Yet Another Kokugo Utility &bull; オフライン国語・漢字・和英辞書</span>
           </div>
         </div>
       </div>
@@ -313,12 +313,12 @@
         <span data-lang="ja"><strong>改定日:</strong> 2026年11月</span>
       </span>
       <span>
-        <span data-lang="en"><strong>Application:</strong> Yaku (<code>com.yaku.jiten</code>)</span>
-        <span data-lang="ja"><strong>対象アプリ:</strong> Yaku (<code>com.yaku.jiten</code>)</span>
+        <span data-lang="en"><strong>Application:</strong> Yaku — Yet Another Kokugo Utility (<code>com.yaku.jiten</code>)</span>
+        <span data-lang="ja"><strong>対象アプリ:</strong> Yaku — Yet Another Kokugo Utility (<code>com.yaku.jiten</code>)</span>
       </span>
       <span>
-        <span data-lang="en"><strong>Platform:</strong> Android</span>
-        <span data-lang="ja"><strong>プラットフォーム:</strong> Android</span>
+        <span data-lang="en"><strong>Platform:</strong> <a href="https://play.google.com/store/apps/details?id=com.yaku.jiten" target="_blank" rel="noopener noreferrer">Google Play (Android)</a></span>
+        <span data-lang="ja"><strong>プラットフォーム:</strong> <a href="https://play.google.com/store/apps/details?id=com.yaku.jiten" target="_blank" rel="noopener noreferrer">Google Play (Android)</a></span>
       </span>
     </div>
 
@@ -328,7 +328,7 @@
 
       <div class="lead-box">
         <strong>Privacy First &amp; Offline Design</strong>
-        Yaku is designed from the ground up to protect your privacy. We believe a dictionary and study utility should never track you.
+        Yaku (Yet Another Kokugo Utility) is designed from the ground up to protect your privacy. We believe a dictionary and study utility should never track you.
       </div>
 
       <section>
@@ -344,10 +344,10 @@
       <section>
         <h2>2. Local-Only Data Storage</h2>
         <ul>
-          <li>All core dictionary databases (JMdict, KANJIDIC2, KanjiVG, Tatoeba) as well as the optional Japanese Names dictionary (JMnedict) reside locally on your device.</li>
-          <li>User data — including bookmarked words, study lists, and settings preferences — is stored exclusively inside your device's private app storage (<code>user.db</code>).</li>
+          <li>All dictionary databases reside locally on your device.</li>
+          <li>User data — including bookmarked words, study lists, and settings preferences — is stored exclusively inside your device's private app storage.</li>
           <li>None of your personal data or study history is synced to any remote server.</li>
-          <li>If your device has Android backup enabled, Google may back up your settings and bookmark lists (not the dictionary database) according to your device backup settings.</li>
+          <li>If your device has Android backup enabled, Google may back up your settings, bookmark lists, and viewing history (not the dictionary database) according to your device backup settings.</li>
           <li>You can export or import settings and lists manually at any time via <strong>Settings &rarr; Backup &amp; Restore</strong>.</li>
           <li>If you enable &ldquo;Search in Yaku from other apps&rdquo;, selected text is passed to Yaku only when you explicitly choose Yaku from the system text selection menu. Yaku does not monitor the clipboard.</li>
           <li>Handwriting recognition runs on-device using an embedded local model (DaKanji). No drawn strokes, coordinates, or recognition candidates are ever recorded, saved to disk, or transmitted over any network.</li>
@@ -359,16 +359,19 @@
         <p>Yaku does not run any servers and does not collect personal data. Dictionary lookups work offline. Network activity related to Yaku is limited to the following:</p>
         <ol type="a">
           <li>
-            <strong>Payment &amp; Supporter Entitlements:</strong> Yaku uses the official Google Play Billing API. When the app starts, it asks Google Play Services whether you have previously unlocked Supporter perks and for localized pricing, so Google Play may contact Google's servers in the background without you tapping anything. This is handled by Google under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Optional one-time Supporter purchases (themes, supporter badge) are processed by Google Play. Yaku caches an encrypted purchase token locally so your unlocked status works offline. The dictionary, Anki export (including custom templates), study lists, and backup remain permanently free.
+            <strong>Payment &amp; Supporter Entitlements:</strong> Yaku uses the official Google Play Billing API. When the app starts, it asks Google Play Services whether you have previously unlocked Supporter perks and for localized pricing, so Google Play may contact Google's servers in the background without you tapping anything. This is handled by Google under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Optional one-time Supporter purchases (such as custom color themes) are processed directly by Google Play.
           </li>
           <li>
-            <strong>Core dictionary with app install:</strong> The main offline dictionary is bundled inside the Yaku app package (compressed in the APK or App Bundle Google Play delivers). Yaku does <strong>not</strong> use Play Asset Delivery to download the core dictionary separately. On first launch, Yaku copies the database once into private app storage so Room can open it; that one-time prepare step is local and does not use the network. Afterward, word and kanji lookups do not need a network connection. Google Play installs are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>; Yaku collects and transmits no personal identifiers, search queries, or telemetry during dictionary setup or use.
+            <strong>Core dictionary with app install:</strong> The main offline dictionary is bundled directly with the Yaku application. Word and kanji lookups operate entirely on-device and do not require a network connection. Google Play installs and updates are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>; Yaku collects and transmits no personal identifiers, search queries, or telemetry during dictionary setup or use.
           </li>
           <li>
-            <strong>On-Demand Feature Delivery (Japanese Names Dictionary):</strong> If you choose to install the optional Japanese Names dictionary (covering ~740,000 entries from JMnedict), the data package is downloaded directly from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. Once downloaded, names searches do not need another network connection.
+            <strong>On-Demand Feature Delivery (Japanese Names Dictionary):</strong> If you choose to install the optional Japanese Names dictionary (JMnedict), the data package is downloaded directly from Google Play via Play Asset Delivery under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Google Play handles this download; Yaku collects and transmits no personal identifiers, search queries, or telemetry during or after this download. Once downloaded, names searches do not need another network connection.
           </li>
           <li>
-            <strong>User-Initiated External Links &amp; Feedback:</strong> If you tap an external link in Yaku (upstream project websites, online license texts, &ldquo;Send feedback&rdquo;, or &ldquo;Report a mismatch&rdquo;), it opens in your device's web browser through a standard system intent. Feedback uses a CryptPad form. &ldquo;Email&rdquo; opens your email client with <code>contact.yaku.jiten@proton.me</code>. Yaku itself does not connect to these sites. Once the link opens, data handling is governed by your browser and the destination site (for feedback, your email provider and CryptPad's privacy policy). Yaku does not attach or upload any diagnostic app data.
+            <strong>User-Initiated External Links &amp; Feedback:</strong> If you tap an external link in Yaku (upstream project websites or online license texts), it opens in your device's web browser through a standard system intent. Feedback and dictionary mismatch reports open your email client via mailto: with <code>contact.yaku.jiten@proton.me</code>. Yaku runs no feedback servers, uses no third-party form processors, and does not attach or upload any diagnostic app data.
+          </li>
+          <li>
+            <strong>Google Play In-App Reviews:</strong> When prompted for an optional rating or when you tap &ldquo;Review on Google Play&rdquo;, the review dialog is displayed and handled directly by Google Play Services under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. Yaku cannot view your rating, read your review text, or receive reviewer telemetry.
           </li>
         </ol>
       </section>
@@ -396,7 +399,7 @@
         <p>
           Yaku is powered by open linguistic datasets and models maintained by dedicated communities and organizations:
           EDRDG (JMdict, KANJIDIC2, JMnedict), KanjiVG Project, NICT (Japanese WordNet), Kaikki.org / Wiktionary, Tatoeba, Wadoku/Kanjium, and DaKanji.
-          Complete license terms and maintainer attributions are documented directly within the app's <strong>About Yaku</strong> screen.
+          Complete license terms and maintainer attributions are documented directly within the app's <strong>Licenses &amp; Attributions</strong> screen.
         </p>
       </section>
 
@@ -416,7 +419,7 @@
 
       <div class="lead-box">
         <strong>プライバシー保護とオフライン設計</strong>
-        Yaku はユーザーのプライバシーを最優先に設計されています。学習ツールや辞書アプリが利用者を追跡すべきではないと考えています。
+        Yaku（Yet Another Kokugo Utility）はユーザーのプライバシーを最優先に設計されています。学習ツールや辞書アプリが利用者を追跡すべきではないと考えています。
       </div>
 
       <section>
@@ -432,10 +435,10 @@
       <section>
         <h2>2. 端末内（ローカル）限定のデータ保存</h2>
         <ul>
-          <li>基本辞書データベース（JMdict、KANJIDIC2、KanjiVG、Tatoeba）およびオプションの人名・地名等辞書（JMnedict）は、すべて端末内に保存されます。</li>
-          <li>ブックマーク、学習リスト、設定などのユーザーデータは端末内の専用ストレージ（<code>user.db</code>）にのみ保存されます。</li>
+          <li>辞書データベースはすべて端末内に保存されています。</li>
+          <li>ブックマーク、学習リスト、設定などのユーザーデータは端末内の専用ストレージにのみ保存されます。</li>
           <li>ユーザーデータが Yaku の外部サーバーに同期されることはありません。</li>
-          <li>端末の Android バックアップが有効な場合、Google が設定とブックマークリスト（辞書データベースを除く）を端末のバックアップ設定に従ってバックアップする場合があります。</li>
+          <li>端末の Android バックアップが有効な場合、Google が設定、ブックマークリスト、閲覧履歴（辞書データベースを除く）を端末のバックアップ設定に従ってバックアップする場合があります。</li>
           <li><strong>設定 &rarr; バックアップと復元</strong>から、設定とリストを手動でいつでも zip ファイルとして書き出し・読み込みが可能です。</li>
           <li>「他のアプリから Yaku で検索」を有効にした場合、システムのテキスト選択メニューで Yaku を選択したときのみテキストが渡されます。クリップボードを常時監視することはありません。</li>
           <li>手書き文字認識は、端末内に内蔵されたモデル（DaKanji）により端末上で動作します。描かれたストローク、座標、認識候補が記録・保存されたり、ネットワーク経由で送信されることは一切ありません。</li>
@@ -447,16 +450,19 @@
         <p>Yaku は外部サーバーを運用せず、個人情報を収集しません。辞書機能はオフラインで動作します。本アプリに関連するネットワーク通信は以下に限られます:</p>
         <ol type="a">
           <li>
-            <strong>決済とサポーター特典:</strong> 公式の Google Play Billing API を使用しています。アプリ起動時にサポーター特典の有効状態確認や地域に応じた価格取得のため Google Play 開発者サービスに問い合わせを行うため、操作を行わなくても Google Play がバックグラウンドで Google のサーバーと通信する場合があります。この通信は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>に基づいて処理されます。任意のサポーター購入（テーマ、バッジ）は Google Play で処理され、オフラインでも状態を維持するため暗号化された購入トークンが端末内に保存されます。辞書、Anki エクスポート（詳細設定含む）、学習リスト、バックアップ機能は恒久的に無料で利用できます。
+            <strong>決済とサポーター特典:</strong> 公式の Google Play Billing API を使用しています。アプリ起動時にサポーター特典の有効状態確認や地域に応じた価格取得のため Google Play 開発者サービスに問い合わせを行うため、操作を行わなくても Google Play がバックグラウンドで Google のサーバーと通信する場合があります。この通信は <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>に基づいて処理されます。任意のサポーター購入（追加テーマなど）は Google Play により直接処理されます。
           </li>
           <li>
-            <strong>メイン辞書（アプリ同梱）:</strong> メインのオフライン辞書データは、Yaku のアプリパッケージ（Google Play から配信される APK / App Bundle 内で圧縮同梱）に含まれます。メイン辞書を Play Asset Delivery で別途ダウンロードすることはありません。初回起動時に、Room が開けるようデータベースを端末内の専用ストレージへ一度だけコピーします。この準備は端末内のみで行われ、ネットワークは使用しません。その後、語彙・漢字の検索にネットワーク接続は不要です。Google Play からのインストールには <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されますが、辞書の準備や利用に伴い Yaku が個人を特定する情報、検索クエリ、テレメトリ等を収集・送信することはありません。
+            <strong>メイン辞書（アプリ同梱）:</strong> メインのオフライン辞書データは Yaku アプリ本体に同梱されています。語彙・漢字の検索は完全に端末内で動作し、ネットワーク接続は不要です。Google Play からのインストールや更新には <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されますが、辞書の準備や利用に伴い Yaku が個人を特定する情報、検索クエリ、テレメトリ等を収集・送信することはありません。
           </li>
           <li>
-            <strong>オンデマンド配信（人名・地名等の固有名詞辞書）:</strong> オプションの人名・地名等の固有名詞辞書（JMnedict、約74万語）の利用を選択した場合、データパッケージは Google Play Asset Delivery を通じて Google Play から直接ダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ダウンロード完了後、名前の検索に追加のネットワーク接続は不要です。
+            <strong>オンデマンド配信（人名・地名等の固有名詞辞書）:</strong> オプションの人名・地名等の固有名詞辞書（JMnedict）の利用を選択した場合、データパッケージは Google Play Asset Delivery を通じて Google Play から直接ダウンロードされます。このダウンロードは Google Play により直接処理され、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>が適用されます。Yaku がこの通信に伴って識別子、検索クエリ、テレメトリ等を収集・送信することはありません。ダウンロード完了後、名前の検索に追加のネットワーク接続は不要です。
           </li>
           <li>
-            <strong>ユーザー起点の外部リンクとフィードバック:</strong> Yaku 内の外部リンク（オープンデータ元サイト、オンラインライセンス本文、「フィードバックを送る」、「不一致を報告」）をタップすると、システムの標準インテントを通じて端末のブラウザで開きます。フィードバックには CryptPad フォームが開きます。「メール」は <code>contact.yaku.jiten@proton.me</code> を mailto: でメールアプリに渡します。Yaku 自体がこれらのサイトと通信することはありません。リンクを開いた後の通信やプライバシーは、ご利用のブラウザおよびリンク先（フィードバック時はメールプロバイダおよび CryptPad）のプライバシーポリシーに準拠します。Yaku が診断アプリデータを添付またはアップロードすることはありません。
+            <strong>ユーザー起点の外部リンクとフィードバック:</strong> Yaku 内の外部リンク（オープンデータ元サイト、オンラインライセンス本文）をタップすると、システムの標準インテントを通じて端末のブラウザで開きます。フィードバックや語釈・用例の不一致報告は、メールアプリ経由（<code>mailto:contact.yaku.jiten@proton.me</code>）で直接開発者へ送信されます。Yaku 自体が外部フォームサーバーを運用したり、診断アプリデータを添付またはアップロードすることはありません。
+          </li>
+          <li>
+            <strong>Google Play アプリ内レビュー:</strong> レビューのお願いが表示された際、または「Google Play で評価」をタップした際、評価ダイアログの表示と処理は Google Play 開発者サービスおよび <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>に基づいて直接行われます。Yaku が星の評価数、レビュー本文、または投稿者情報を取得・閲覧・収集することはありません。
           </li>
         </ol>
       </section>
@@ -482,7 +488,7 @@
       <section>
         <h2>6. オープンソースデータと著作権表示</h2>
         <p>
-          Yaku はオープン言語コミュニティの成果を活用しています。EDRDG（JMdict、KANJIDIC2、JMnedict）、KanjiVG プロジェクト、NICT（日本語WordNet）、Kaikki.org / Wiktionary、Tatoeba、Wadoku/Kanjium、DaKanji の各プロジェクトに深く感謝申し上げます。詳細なライセンスおよび権利者表記はアプリ内の「<strong>Yaku について</strong>」画面に記載されています。
+          Yaku はオープン言語コミュニティの成果を活用しています。EDRDG（JMdict、KANJIDIC2、JMnedict）、KanjiVG プロジェクト、NICT（日本語WordNet）、Kaikki.org / Wiktionary、Tatoeba、Wadoku/Kanjium、DaKanji の各プロジェクトに深く感謝申し上げます。詳細なライセンスおよび権利者表記はアプリ内の「<strong>ライセンスと権利表記</strong>」画面に記載されています。
         </p>
       </section>
 
@@ -499,8 +505,8 @@
     <!-- Footer -->
     <footer>
       <div>
-        <span data-lang="en">Last updated: November 2026 &bull; Yaku Project</span>
-        <span data-lang="ja">最終更新: 2026年11月 &bull; Yaku Project</span>
+        <span data-lang="en">Last updated: November 2026 &bull; Yaku Project (Yet Another Kokugo Utility)</span>
+        <span data-lang="ja">最終更新: 2026年11月 &bull; Yaku Project (Yet Another Kokugo Utility)</span>
       </div>
       <div class="footer-actions">
         <a href="javascript:window.print()">
